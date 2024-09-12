@@ -69,14 +69,16 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 
 ### Windows
 
-1. Descompacte o arquivo baixado usando o WinRAR ou 7-Zip.
+1.  Faça o download da aplicação clicando [aqui](https://github.com/Jorgeluisreis/AskConsole/releases)
 
-2. Mova a pasta descompactada para um local do seu computador. 
+2. Descompacte o arquivo baixado usando o WinRAR ou 7-Zip.
+
+3. Mova a pasta descompactada para um local do seu computador. 
 
 **Observação:** Caso mova para a pasta "Arquivos de Programas", certifique-se de que as permissões de modificação da pasta estão adequadas.
 
 
-3. Ao abrir a aplicação pela primeira vez, será solicitado um arquivo `.ini` com a chave API. A estrutura do arquivo deve ser:
+4. Ao abrir a aplicação pela primeira vez, será solicitado um arquivo `.ini` com a chave API. A estrutura do arquivo deve ser:
 
 
 ```text
@@ -89,8 +91,18 @@ API=AzKj231Azi8AqweKa
 
 ### Linux
 
-1. Descompacte o arquivo baixado usando o `unzip` ou qualquer outra ferramenta de descompactação de sua preferência.
+1.  Faça o download da aplicação clicando [aqui](https://github.com/Jorgeluisreis/AskConsole/releases)
 
-2. Mova a pasta descompactada para um local de sua escolha no sistema.
+2. Descompacte o arquivo baixado usando o `unzip` ou qualquer outra ferramenta de descompactação de sua preferência.
 
-3. Ao abrir a aplicação pela primeira vez, será solicitado um arquivo `.ini` com a chave API. A estrutura do arquivo deve ser:
+3. Mova a pasta descompactada para um local de sua escolha no sistema.
+
+4. Ao abrir a aplicação pela primeira vez, será solicitado um arquivo `.ini` com a chave API. A estrutura do arquivo deve ser:
+
+```text
+API=(Sua API Aqui)
+```
+Por exemplo:
+```text
+API=AzKj231Azi8AqweKa
+```
