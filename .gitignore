@@ -1,0 +1,80 @@
+# Coisas do projeto
+AskConsole.exe
+AskConsole.xml
+api_key.ini
+conversations/
+
+# Maven target directory
+/target/
+
+# Não ignorar a pasta lib/
+!lib/
+
+# Maven specific files
+*.log
+!src/main/resources/
+dependency-reduced-pom.xml
+release.properties
+dependency-reduced-pom.xml.asc
+release.properties.asc
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+buildNumber.properties
+.mvn/timing.properties
+# Avoid ignoring Maven wrapper jar file (.jar)
+/.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse specific files
+*.launch
+.settings/
+.metadata/
+.classpath
+.project
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+# Avoid ignoring IDEA libraries directory
+!.idea/libraries/
+
+# NetBeans specific files
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code specific files
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# JAR and other binary files
+*.war
+*.ear
+*.class
+
+# Backup files
+*.bak
+*.backup
+
+# Ignore files generated during tests
+test-output/
+surefire-reports/
