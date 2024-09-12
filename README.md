@@ -20,7 +20,12 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 - ![JSON](https://img.shields.io/badge/JSON-20240303-blue) - Biblioteca para manipulação de JSON
 - ![Google Auth Library](https://img.shields.io/badge/Google_Auth_Library-1.24.1-blue) - Biblioteca para autenticação OAuth2
 
+##  🏛️ Arquitetura da Aplicação
+<p align="center">
 
+<img src="https://i.imgur.com/MWyck0c.png" alt="Arquitetura">
+
+</p>
 
 ## 📐 Padrões e Metodologias Utilizadas
 
