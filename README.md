@@ -97,7 +97,17 @@ API=AzKj231Azi8AqweKa
 
 3. Mova a pasta descompactada para um local de sua escolha no sistema.
 
-4. Ao abrir a aplicação pela primeira vez, será solicitado um arquivo `.ini` com a chave API. A estrutura do arquivo deve ser:
+4. Torne o arquivo executável e execute a aplicação com os seguinte comando
+```text
+chmod +x AskConsole.jar
+``` 
+
+5. Execute a aplicação
+```text
+java -jar AskConsole.jar
+```
+
+7. Ao abrir a aplicação pela primeira vez, será solicitado um arquivo `.ini` com a chave API. A estrutura do arquivo deve ser:
 
 ```text
 API=(Sua API Aqui)
