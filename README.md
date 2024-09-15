@@ -1,6 +1,7 @@
 <p align="center">
   <img src="https://i.imgur.com/8YBKZWj.png" alt="AskConsole Logo">
 </p>
+<p align="center"> <a href="https://github.com/Jorgeluisreis/AskConsole"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole/issues"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole/pulls"> <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole"> <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole"> <img alt="License" src="https://img.shields.io/github/license/Jorgeluisreis/AskConsole"> </a> </p>
 
 # AskConsole  
 
@@ -23,7 +24,7 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 ##  🏛️ Arquitetura da Aplicação
 <p align="center">
 
-<img src="https://i.imgur.com/MWyck0c.png" alt="Arquitetura">
+<img src="https://i.imgur.com/kKoqGPj.png" alt="Arquitetura">
 
 </p>
 
