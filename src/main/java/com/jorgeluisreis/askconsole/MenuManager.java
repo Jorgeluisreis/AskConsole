@@ -8,15 +8,12 @@ import java.util.List;
 import java.util.Scanner;
 
 import org.fusesource.jansi.AnsiConsole;
-import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import com.jorgeluisreis.askconsole.client.ApiKeyManager;
 import com.jorgeluisreis.askconsole.client.GeminiApiClient;
 import com.jorgeluisreis.askconsole.service.ConsoleService;
 import com.jorgeluisreis.askconsole.util.ConversationManager;
-import com.jorgeluisreis.askconsole.util.TextFormatter;
 import net.jorgedev.ConsoleClear;
 
 import static org.fusesource.jansi.Ansi.ansi;
@@ -214,39 +211,10 @@ public class MenuManager {
                             .a("Escolha inválida. Por favor, escolha um número entre 1 e " + conversations.size())
                             .reset());
                 } else {
-
                     String hash = conversations.get(index).replace(".json", "");
-                    String conversation = conversationManager.loadConversation(hash);
-
-                    GeminiApiClient geminiApiClient = new GeminiApiClient(apiKeyManager.getApiKey());
-                    consoleService = new ConsoleService(geminiApiClient, conversationManager, hash);
-                    consoleService.loadConversationHistory(conversation);
-
-                    JSONObject conversationJson = new JSONObject(conversation);
-                    JSONArray messages = conversationJson.getJSONArray("messages");
-                    for (int i = 0; i < messages.length(); i++) {
-                        JSONObject message = messages.getJSONObject(i);
-                        String time = message.getString("time");
-                        String sender = message.getString("sender");
-                        String content = message.getString("content");
-                        String formattedMessage = TextFormatter.formatText(content);
-
-                        LocalDateTime messageTime = LocalDateTime.parse(time,
-                                DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-                        String formattedTime = messageTime.format(formatter);
-
-                        if (sender.equals("Eu")) {
-                            System.out.println(
-                                    ansi().fgGreen().a(formattedTime + " - " + sender + ": ").reset()
-                                            + formattedMessage);
-                        } else {
-                            System.out.println(
-                                    ansi().fgCyan().a(formattedTime + " - " + sender + ": ").reset()
-                                            + formattedMessage);
-                        }
-
-                        System.out.println(ansi().fgBrightBlack().a("------------------------------------").reset());
-                    }
+                    System.out.println(ansi().fgBrightGreen().a("Hash da Conversa: " + ansi().fgDefault().a(hash)));
+                    String conversationHistory = consoleService.getConversationHistory(hash);
+                    System.out.println(conversationHistory);
 
                     ChatHandler chatHandler = new ChatHandler(consoleService);
                     chatHandler.startChat(hash);
@@ -278,8 +246,8 @@ public class MenuManager {
         System.out.println();
         System.out.println(ansi().fgBrightCyan().a("========= Informações ============").reset());
         System.out.println("Desenvolvido por: Jorgeluisreis");
-        System.out.println("Versão: 1.0");
-        System.out.println("Build: 11/09/2024");
+        System.out.println("Versão: 1.0.1");
+        System.out.println("Build: 14/09/2024");
         System.out.println(ansi().fgBrightCyan().a("==================================").reset());
         System.out.println();
         System.out.println(ansi().fgYellow().a("Pressione Enter para voltar ao menu principal...").reset());

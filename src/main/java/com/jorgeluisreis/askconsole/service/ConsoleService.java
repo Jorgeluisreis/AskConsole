@@ -65,7 +65,6 @@ public class ConsoleService {
                 String jsonContent = new String(Files.readAllBytes(file.toPath()));
 
                 jsonContent = jsonContent.trim();
-
                 if (jsonContent.startsWith("{")) {
                     JSONObject jsonObject = new JSONObject(jsonContent);
                     JSONArray messages = jsonObject.getJSONArray("messages");
@@ -108,15 +107,10 @@ public class ConsoleService {
                         return "Nenhuma conversa anterior encontrada. Iniciando um novo chat...";
                     }
                 } else {
-                    System.out.println(ansi().fgRed()
-                            .a("Erro ao carregar o histórico da conversa: O arquivo não está no formato JSON correto.")
-                            .reset());
-                    return "";
+                    return "Erro ao carregar o histórico da conversa: O arquivo não está no formato JSON correto.";
                 }
             } catch (IOException | JSONException e) {
-                System.out.println(
-                        ansi().fgRed().a("Erro ao carregar o histórico da conversa: " + e.getMessage()).reset());
-                return "";
+                return "Erro ao carregar o histórico da conversa: " + e.getMessage();
             }
         }
         return "Iniciando um novo chat...";
