@@ -148,7 +148,6 @@ public class ApiKeyManager {
                     System.out.println("Chave API não encontrada no arquivo.");
                 } catch (IOException e) {
                     System.out.println("Erro ao ler o arquivo de chave API: " + e.getMessage());
-                    file.delete();
                 }
             }
         } else {

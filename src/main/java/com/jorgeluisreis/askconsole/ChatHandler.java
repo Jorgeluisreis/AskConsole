@@ -57,7 +57,7 @@ public class ChatHandler {
             System.out.println(ansi().fgRed().a("Erro ao carregar o histórico da conversa: " + e.getMessage()).reset());
         }
         while (true) {
-            String formattedDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy, HH:mm:ss"));
+            String formattedDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
             System.out.print(ansi().fgGreen().a(formattedDate + " - Eu: ").reset());
             String input = reader.readLine().trim();
 

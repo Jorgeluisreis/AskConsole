@@ -26,7 +26,7 @@ public class ConversationManager {
 
     public String generateHash(String input) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("MD5");
-        byte[] hashBytes = md.digest(input.getBytes(StandardCharsets.UTF_8)); // Ensure UTF-8 encoding
+        byte[] hashBytes = md.digest(input.getBytes(StandardCharsets.UTF_8));
         StringBuilder sb = new StringBuilder();
         for (byte b : hashBytes) {
             sb.append(String.format("%02x", b));
@@ -66,7 +66,6 @@ public class ConversationManager {
         botMessageJson.put("time", botTime.format(formatter));
         messagesArray.put(botMessageJson);
 
-        // Write JSON file with UTF-8 encoding
         try (BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
             writer.write(conversationJson.toString(4));
         }
@@ -92,7 +91,7 @@ public class ConversationManager {
         }
 
         try {
-            return Files.readString(path, StandardCharsets.UTF_8); // Read with UTF-8 encoding
+            return Files.readString(path, StandardCharsets.UTF_8);
         } catch (IOException e) {
             throw new IOException("Erro ao carregar conversa: " + e.getMessage());
         }
