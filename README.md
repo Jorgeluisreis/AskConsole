@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="https://i.imgur.com/8YBKZWj.png" alt="AskConsole Logo">
 </p>
@@ -46,7 +47,7 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 ## 🌐 Funcionalidades
 
 - **Criar Conversas Interativas** - Permite iniciar e gerenciar conversas com uma interface de linha de comando.
-<p align="center"> <img src="https://i.imgur.com/oLz8UYC.png" alt="Conversa interativa"> </p>
+<p align="center"> <img src="https://i.imgur.com/kqlRefx.png" alt="Conversa interativa"> </p>
 
 - **Salvar Conversas** - Guarda o histórico das conversas para consultas futuras.
 
@@ -54,7 +55,7 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 
 - **Continuar Conversas** - Retoma conversas de onde pararam.
 
-<p align="center"> <img src="https://i.imgur.com/4QVFpKt.png" alt="Continuar Conversas"> </p>
+<p align="center"> <img src="https://i.imgur.com/leqmyAA.png" alt="Continuar Conversas"> </p>
 
 - **Importar Chave API** - Necessário para autenticação e uso da aplicação.
 
@@ -72,6 +73,7 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 ## 🛠️ Instalação
 
 **OBS:** Clique [aqui](https://makersuite.google.com/app/apikey?hl=pt-br) para adquirir a sua chave API de forma gratuita para usar a aplicação. 
+- É altamente recomendado habilitar o encoding UTF-8 do seu computador. Caso não saiba, clique [aqui](https://cursos.alura.com.br/forum/topico-problemas-de-codificacao-de-caracteres-na-saida-282140).
 
 ### Windows
 
