@@ -215,6 +215,9 @@ public class MenuManager {
                     System.out.println(ansi().fgBrightGreen().a("Hash da Conversa: " + ansi().fgDefault().a(hash)));
                     String conversationHistory = consoleService.getConversationHistory(hash);
                     System.out.println(conversationHistory);
+                    System.out.println(ansi().fgBrightGreen().a("Hash da Conversa: " + ansi().fgDefault().a(hash)));
+                    String conversationHistory = consoleService.getConversationHistory(hash);
+                    System.out.println(conversationHistory);
 
                     ChatHandler chatHandler = new ChatHandler(consoleService);
                     chatHandler.startChat(hash);

@@ -2,6 +2,7 @@
   <img src="https://i.imgur.com/8YBKZWj.png" alt="AskConsole Logo">
 </p>
 <p align="center"> <a href="https://github.com/Jorgeluisreis/AskConsole"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole/issues"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole/pulls"> <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole"> <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole"> <img alt="License" src="https://img.shields.io/github/license/Jorgeluisreis/AskConsole"> </a> </p>
+<p align="center"> <a href="https://github.com/Jorgeluisreis/AskConsole"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole/issues"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole/pulls"> <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole"> <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Jorgeluisreis/AskConsole"> </a> <a href="https://github.com/Jorgeluisreis/AskConsole"> <img alt="License" src="https://img.shields.io/github/license/Jorgeluisreis/AskConsole"> </a> </p>
 
 # AskConsole
 
@@ -26,6 +27,7 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 <p align="center">
 
 <img src="https://i.imgur.com/kKoqGPj.png" alt="Arquitetura">
+<img src="https://i.imgur.com/kKoqGPj.png" alt="Arquitetura">
 
 </p>
 
@@ -47,6 +49,7 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 
 - **Criar Conversas Interativas** - Permite iniciar e gerenciar conversas com uma interface de linha de comando.
 <p align="center"> <img src="https://i.imgur.com/kqlRefx.png" alt="Conversa interativa"> </p>
+<p align="center"> <img src="https://i.imgur.com/kqlRefx.png" alt="Conversa interativa"> </p>
 
 - **Salvar Conversas** - Guarda o histórico das conversas para consultas futuras.
 
@@ -54,6 +57,7 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 
 - **Continuar Conversas** - Retoma conversas de onde pararam.
 
+<p align="center"> <img src="https://i.imgur.com/leqmyAA.png" alt="Continuar Conversas"> </p>
 <p align="center"> <img src="https://i.imgur.com/leqmyAA.png" alt="Continuar Conversas"> </p>
 
 - **Importar Chave API** - Necessário para autenticação e uso da aplicação.
