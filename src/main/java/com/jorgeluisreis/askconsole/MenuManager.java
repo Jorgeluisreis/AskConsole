@@ -215,6 +215,9 @@ public class MenuManager {
                     System.out.println(ansi().fgBrightGreen().a("Hash da Conversa: " + ansi().fgDefault().a(hash)));
                     String conversationHistory = consoleService.getConversationHistory(hash);
                     System.out.println(conversationHistory);
+                    System.out.println(ansi().fgBrightGreen().a("Hash da Conversa: " + ansi().fgDefault().a(hash)));
+                    String conversationHistory = consoleService.getConversationHistory(hash);
+                    System.out.println(conversationHistory);
 
                     ChatHandler chatHandler = new ChatHandler(consoleService);
                     chatHandler.startChat(hash);
@@ -246,8 +249,8 @@ public class MenuManager {
         System.out.println();
         System.out.println(ansi().fgBrightCyan().a("========= Informações ============").reset());
         System.out.println("Desenvolvido por: Jorgeluisreis");
-        System.out.println("Versão: 1.0.1");
-        System.out.println("Build: 14/09/2024");
+        System.out.println("Versão: 1.1.2");
+        System.out.println("Build: 03/02/2025");
         System.out.println(ansi().fgBrightCyan().a("==================================").reset());
         System.out.println();
         System.out.println(ansi().fgYellow().a("Pressione Enter para voltar ao menu principal...").reset());

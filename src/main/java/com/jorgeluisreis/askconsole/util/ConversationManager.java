@@ -90,6 +90,10 @@ public class ConversationManager {
             throw new FileNotFoundException("Arquivo de conversa não encontrado.");
         }
 
+        if (Files.size(path) == 0) {
+            throw new IOException("Arquivo de conversa vazio ou corrompido.");
+        }
+
         try {
             return Files.readString(path, StandardCharsets.UTF_8);
         } catch (IOException e) {

@@ -74,7 +74,7 @@ public class ChatHandler {
             }
 
             if (!input.equalsIgnoreCase("/sair")) {
-                String response = consoleService.chat(input);
+                String response = consoleService.chat(input, hash);
 
                 if (response.startsWith("{")) {
                     continue;
