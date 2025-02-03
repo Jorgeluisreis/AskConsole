@@ -246,8 +246,8 @@ public class MenuManager {
         System.out.println();
         System.out.println(ansi().fgBrightCyan().a("========= Informações ============").reset());
         System.out.println("Desenvolvido por: Jorgeluisreis");
-        System.out.println("Versão: 1.0.1");
-        System.out.println("Build: 14/09/2024");
+        System.out.println("Versão: 1.1.2");
+        System.out.println("Build: 03/02/2025");
         System.out.println(ansi().fgBrightCyan().a("==================================").reset());
         System.out.println();
         System.out.println(ansi().fgYellow().a("Pressione Enter para voltar ao menu principal...").reset());
