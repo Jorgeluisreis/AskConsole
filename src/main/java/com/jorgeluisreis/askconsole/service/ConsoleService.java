@@ -36,6 +36,8 @@ public class ConsoleService {
 
             String response = geminiApiClient.sendRequest(fullPrompt);
 
+            response = removePrefixIfPresent(response, "IA: ");
+
             String botMessage = JsonUtil.parseGeminiResponse(response);
 
             if (botMessage == null || botMessage.isEmpty()) {
@@ -52,6 +54,13 @@ public class ConsoleService {
             e.printStackTrace();
             return "Erro ao processar a solicitação ou a resposta da IA";
         }
+    }
+
+    private String removePrefixIfPresent(String response, String prefix) {
+        while (response.startsWith(prefix + " ")) {
+            response = response.substring(prefix.length() + 1);
+        }
+        return response;
     }
 
     public String getConversationHistory(String hash) {
