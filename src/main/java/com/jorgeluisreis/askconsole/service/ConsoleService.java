@@ -31,21 +31,19 @@ public class ConsoleService {
     public String chat(String userMessage, String hash) {
         try {
             String formattedHistory = formatConversationHistoryForPrompt(hash);
-
             String fullPrompt = formattedHistory + "\nEu: " + userMessage;
 
             String response = geminiApiClient.sendRequest(fullPrompt);
 
-            response = removePrefixIfPresent(response, "IA: ");
-
             String botMessage = JsonUtil.parseGeminiResponse(response);
+
+            botMessage = removePrefixIfPresent(botMessage, "IA: ");
 
             if (botMessage == null || botMessage.isEmpty()) {
                 botMessage = "Erro: Resposta da IA sem conteúdo.";
             }
 
             conversationHistory += "\nEu: " + userMessage + "\nIA: " + botMessage;
-
             conversationManager.saveMessage(hash, userMessage, botMessage, LocalDateTime.now(), LocalDateTime.now());
 
             return botMessage;
@@ -57,10 +55,7 @@ public class ConsoleService {
     }
 
     private String removePrefixIfPresent(String response, String prefix) {
-        while (response.startsWith(prefix + " ")) {
-            response = response.substring(prefix.length() + 1);
-        }
-        return response;
+        return response.replaceAll("(?i)^" + prefix.trim() + "\\s*", "").trim();
     }
 
     public String getConversationHistory(String hash) {
