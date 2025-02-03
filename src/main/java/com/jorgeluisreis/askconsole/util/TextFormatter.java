@@ -7,7 +7,6 @@ import static org.fusesource.jansi.Ansi.ansi;
 public class TextFormatter {
 
     public static String formatText(String input) {
-        // Padrão para negrito: **texto**
         Pattern boldPattern = Pattern.compile("\\*\\*(.*?)\\*\\*");
         Matcher boldMatcher = boldPattern.matcher(input);
         StringBuffer resultString = new StringBuffer();
@@ -18,10 +17,9 @@ public class TextFormatter {
         }
         boldMatcher.appendTail(resultString);
 
-        // Padrão para itálico e negrito: *texto*
         Pattern italicBoldPattern = Pattern.compile("\\*(.*?)\\*");
         Matcher italicBoldMatcher = italicBoldPattern.matcher(resultString.toString());
-        resultString.setLength(0); // Resetar o buffer para reutilização
+        resultString.setLength(0);
 
         while (italicBoldMatcher.find()) {
             italicBoldMatcher.appendReplacement(resultString,
@@ -29,6 +27,16 @@ public class TextFormatter {
         }
         italicBoldMatcher.appendTail(resultString);
 
-        return resultString.toString();
+        Pattern italicGravePattern = Pattern.compile("`(.*?)`");
+        Matcher italicGraveMatcher = italicGravePattern.matcher(resultString.toString());
+        StringBuffer finalString = new StringBuffer();
+
+        while (italicGraveMatcher.find()) {
+            italicGraveMatcher.appendReplacement(finalString,
+                    "\033[3m" + italicGraveMatcher.group(1) + "\033[0m");
+        }
+        italicGraveMatcher.appendTail(finalString);
+
+        return finalString.toString();
     }
 }
