@@ -21,18 +21,18 @@ public class ConsoleService {
 
     private final GeminiApiClient geminiApiClient;
     private final ConversationManager conversationManager;
-    private final String hash;
-    private String conversationHistory = "";
+    public String conversationHistory = "";
 
     public ConsoleService(GeminiApiClient geminiApiClient, ConversationManager conversationManager, String hash) {
         this.geminiApiClient = geminiApiClient;
         this.conversationManager = conversationManager;
-        this.hash = hash;
     }
 
-    public String chat(String userMessage) {
+    public String chat(String userMessage, String hash) {
         try {
-            String fullPrompt = conversationHistory + "\nEu: " + userMessage;
+            String formattedHistory = formatConversationHistoryForPrompt(hash);
+
+            String fullPrompt = formattedHistory + "\nEu: " + userMessage;
 
             String response = geminiApiClient.sendRequest(fullPrompt);
 
@@ -124,8 +124,10 @@ public class ConsoleService {
             StringBuilder conversationHistoryBuilder = new StringBuilder();
             for (int i = 0; i < messagesArray.length(); i++) {
                 JSONObject messageJson = messagesArray.getJSONObject(i);
-                conversationHistoryBuilder.append(messageJson.getString("sender")).append(": ")
-                        .append(messageJson.getString("content")).append("\n");
+                String sender = messageJson.getString("sender");
+                String content = messageJson.getString("content");
+
+                conversationHistoryBuilder.append(sender).append(": ").append(content).append("\n");
             }
 
             this.conversationHistory = conversationHistoryBuilder.toString();
@@ -136,5 +138,47 @@ public class ConsoleService {
 
     public void clearHistory() {
         conversationHistory = "";
+    }
+
+    public String formatConversationHistoryForPrompt(String hash) {
+        File file = new File("conversations/" + hash + ".json");
+
+        if (file.exists() && file.isFile()) {
+            try {
+                String jsonContent = new String(Files.readAllBytes(file.toPath())).trim();
+
+                if (jsonContent.startsWith("{")) {
+                    JSONObject jsonObject = new JSONObject(jsonContent);
+                    JSONArray messages = jsonObject.getJSONArray("messages");
+
+                    if (messages.length() > 0) {
+                        StringBuilder formattedHistory = new StringBuilder();
+
+                        for (int i = 0; i < messages.length(); i++) {
+                            JSONObject message = messages.getJSONObject(i);
+                            String sender = message.getString("sender");
+                            String content = message.getString("content");
+
+                            if (sender.equals("Eu")) {
+                                formattedHistory.append("Eu: " + content + "\n");
+                            } else if (sender.equals("IA")) {
+                                formattedHistory.append("IA: " + content + "\n");
+                            } else {
+                                formattedHistory.append(sender + ": " + content + "\n");
+                            }
+                        }
+
+                        return formattedHistory.toString();
+                    } else {
+                        return "Nenhuma conversa anterior encontrada. Iniciando um novo chat...";
+                    }
+                } else {
+                    return "Erro ao carregar o histórico da conversa: O arquivo não está no formato JSON correto.";
+                }
+            } catch (IOException | JSONException e) {
+                return "Erro ao carregar o histórico da conversa: " + e.getMessage();
+            }
+        }
+        return "Iniciando um novo chat...";
     }
 }
