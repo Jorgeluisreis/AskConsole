@@ -27,7 +27,6 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 <p align="center">
 
 <img src="https://i.imgur.com/kKoqGPj.png" alt="Arquitetura">
-<img src="https://i.imgur.com/kKoqGPj.png" alt="Arquitetura">
 
 </p>
 
