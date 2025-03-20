@@ -26,7 +26,6 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 <p align="center">
 
 <img src="https://i.imgur.com/kKoqGPj.png" alt="Arquitetura">
-<img src="https://i.imgur.com/kKoqGPj.png" alt="Arquitetura">
 
 </p>
 
@@ -48,7 +47,6 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 
 - **Criar Conversas Interativas** - Permite iniciar e gerenciar conversas com uma interface de linha de comando.
 <p align="center"> <img src="https://i.imgur.com/kqlRefx.png" alt="Conversa interativa"> </p>
-<p align="center"> <img src="https://i.imgur.com/kqlRefx.png" alt="Conversa interativa"> </p>
 
 - **Salvar Conversas** - Guarda o histórico das conversas para consultas futuras.
 
@@ -56,7 +54,6 @@ O AskConsole foi criado com o intuito de utilizar a estrutura simples do CLI com
 
 - **Continuar Conversas** - Retoma conversas de onde pararam.
 
-<p align="center"> <img src="https://i.imgur.com/leqmyAA.png" alt="Continuar Conversas"> </p>
 <p align="center"> <img src="https://i.imgur.com/leqmyAA.png" alt="Continuar Conversas"> </p>
 
 - **Importar Chave API** - Necessário para autenticação e uso da aplicação.
